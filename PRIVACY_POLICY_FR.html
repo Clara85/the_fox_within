@@ -15,10 +15,11 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.8;
             color: #333;
-            background: #f5f7fa;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh;
             padding: 20px;
         }
 
@@ -26,81 +27,64 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            padding: 50px;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
         }
 
         .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 50px 40px;
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 3px solid #667eea;
         }
 
-        h1 {
+        .header h1 {
             font-size: 2.5em;
-            color: #667eea;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 20px;
         }
 
         .back-link {
             display: inline-block;
-            margin-bottom: 30px;
-            color: #667eea;
+            margin-top: 20px;
+            color: white;
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
         .back-link:hover {
-            color: #764ba2;
+            background: rgba(255, 255, 255, 0.3);
         }
 
-        .app-info {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-
-        .app-info h2 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .app-info ul {
-            list-style: none;
-        }
-
-        .app-info li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .app-info li:before {
-            content: "•";
-            color: #667eea;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
+        .content {
+            padding: 40px;
         }
 
         h2 {
-            color: #333;
+            color: #4facfe;
             font-size: 1.8em;
             margin-top: 40px;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;
+            border-bottom: 3px solid #e0e0e0;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
         }
 
         h3 {
-            color: #667eea;
+            color: #00f2fe;
             font-size: 1.4em;
             margin-top: 30px;
             margin-bottom: 15px;
@@ -108,14 +92,16 @@
 
         h4 {
             color: #555;
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin-top: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             text-align: justify;
+            font-size: 1.05em;
         }
 
         ul, ol {
@@ -125,48 +111,85 @@
 
         li {
             margin-bottom: 10px;
+            font-size: 1.05em;
         }
 
         strong {
-            color: #333;
+            color: #4facfe;
             font-weight: 600;
         }
 
         .highlight-box {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 5px solid #4facfe;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
-        .success-item {
-            color: #28a745;
+        .highlight-box.warning {
+            border-left-color: #f5576c;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
         }
 
-        .error-item {
-            color: #dc3545;
+        .contact-info {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 35px;
+            margin-top: 50px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
         }
 
         .footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #e0e0e0;
+            background: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+
+        .last-updated {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
             text-align: center;
             color: #666;
+            font-weight: 600;
         }
 
-        .footer strong {
-            color: #667eea;
-        }
+            @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
 
-        @media (max-width: 768px) {
-            .container {
+            .header {
                 padding: 30px 20px;
             }
 
-            h1 {
-                font-size: 2em;
+            .content {
+                padding: 25px 20px;
             }
 
             h2 {
@@ -178,13 +201,46 @@
             }
         }
 
-        a {
-            color: #667eea;
-            text-decoration: none;
+        .app-info {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 5px solid #4facfe;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
-        a:hover {
-            text-decoration: underline;
+        .app-info h3 {
+            color: #4facfe;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+
+        .app-info ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .app-info li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .app-info li:before {
+            content: "•";
+            color: #4facfe;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .success-item {
+            color: #28a745;
+        }
+
+        .error-item {
+            color: #dc3545;
         }
     </style>
     <script type="application/ld+json">
@@ -205,218 +261,297 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Home / Retour à l'accueil / 返回首页</a>
-        
         <div class="header">
-            <h1>Politique de Confidentialité</h1>
+            <h1>🦊 Politique de Confidentialité</h1>
+            <p class="subtitle">The Fox Within - Votre Coach Personnel pour le TDAH</p>
+            <a href="index.html" class="back-link">← Retour à la sélection de langue</a>
         </div>
 
-        <div class="app-info">
-            <h2>Informations sur l'Application</h2>
+        <div class="content">
+            <div class="last-updated">
+                <strong>Dernière mise à jour :</strong> Janvier 2025
+            </div>
+
+            <div class="app-info">
+                <h3>Informations sur l'Application</h3>
+                <ul>
+                    <li><strong>Nom de l'application</strong> : The Fox Within</li>
+                    <li><strong>Développeur</strong> : Cheng Zhang</li>
+                    <li><strong>Courriel de contact</strong> : thefoxwithinapp@gmail.com</li>
+                    <li><strong>Nom du package de l'application</strong> : com.thefoxwithin.app</li>
+                </ul>
+            </div>
+
+            <h2>1. Introduction</h2>
+            <p>Bienvenue dans <strong>The Fox Within</strong> (« nous », « notre » ou « nos »). Nous nous engageons à protéger votre vie privée et à assurer la transparence sur la façon dont nous collectons, utilisons et protégeons vos informations personnelles. Cette Politique de Confidentialité explique nos pratiques concernant la collecte, l'utilisation et la divulgation de données lorsque vous utilisez notre application mobile (« Application »).</p>
+            <p>En utilisant notre Application, vous acceptez la collecte et l'utilisation d'informations conformément à cette politique.</p>
+
+            <h2>2. Informations que nous collectons</h2>
+            
+            <h3>2.1 Informations de compte</h3>
             <ul>
-                <li><strong>Nom de l'application</strong> : The fox within</li>
-                <li><strong>Développeur</strong> : Cheng Zhang</li>
-                <li><strong>Courriel de contact</strong> : thefoxwithinapp@gmail.com</li>
-                <li><strong>Nom du package de l'application</strong> : com.thefoxwithin.app</li>
+                <li><strong>Adresse e-mail</strong> : Utilisée pour l'inscription au compte, l'authentification et la communication</li>
+                <li><strong>Nom d'utilisateur</strong> : Nom d'affichage optionnel pour votre compte</li>
+                <li><strong>Mot de passe</strong> : Chiffré et stocké de manière sécurisée (nous ne pouvons pas voir votre mot de passe)</li>
             </ul>
-        </div>
 
-        <h2>Collecte de Données</h2>
-        <p>Cette application collecte les données suivantes pour fournir les fonctionnalités principales :</p>
+            <h3>2.2 Données d'activité de l'application</h3>
+            <p>Nous collectons les données suivantes pour fournir les fonctionnalités principales de l'application :</p>
+            <ul>
+                <li><strong>Tâches quotidiennes</strong> : Tâches que vous créez et complétez chaque jour</li>
+                <li><strong>Historique des tâches</strong> : Enregistrements des tâches et activités complétées</li>
+                <li><strong>Révisions quotidiennes</strong> : Vos réflexions quotidiennes, réalisations et scores de satisfaction</li>
+                <li><strong>Plans pour demain</strong> : Plans et objectifs que vous fixez pour les jours à venir</li>
+                <li><strong>Sessions de concentration</strong> : Enregistrements de vos sessions de concentration et de productivité</li>
+                <li><strong>Progrès d'apprentissage</strong> : Progrès dans les cours structurés et le matériel d'apprentissage</li>
+                <li><strong>Notes de cours</strong> : Notes que vous prenez lors de la réalisation des cours</li>
+                <li><strong>Pensées aléatoires</strong> : Pensées et idées personnelles que vous enregistrez</li>
+                <li><strong>Activités de repos</strong> : Enregistrements des activités de repos et de détente</li>
+                <li><strong>Réponses d'intégration</strong> : Réponses aux questions de configuration initiale (utilisées pour la personnalisation)</li>
+            </ul>
 
-        <h3>1. Informations de Compte Utilisateur</h3>
-        <ul>
-            <li><strong>Adresse courriel</strong> : Utilisée pour l'inscription, la connexion et la gestion du compte</li>
-            <li><strong>Nom d'utilisateur</strong> : Utilisé pour l'affichage personnalisé</li>
-            <li><strong>ID utilisateur</strong> : Identifiant unique généré par le système</li>
-        </ul>
+            <h3>2.3 Informations sur l'appareil</h3>
+            <ul>
+                <li><strong>Type d'appareil</strong> : Informations de base sur l'appareil à des fins de compatibilité</li>
+                <li><strong>Système d'exploitation</strong> : Version du système d'exploitation pour l'optimisation de l'application</li>
+                <li><strong>Version de l'application</strong> : Pour le dépannage et le support</li>
+            </ul>
 
-        <h3>2. Données d'Activité de l'Application</h3>
-        <ul>
-            <li><strong>Données de tâches</strong> : Tâches quotidiennes créées et gérées par les utilisateurs</li>
-            <li><strong>Notes et enregistrements</strong> : Réflexions quotidiennes, plans pour demain, pensées aléatoires, etc.</li>
-            <li><strong>Progrès d'apprentissage</strong> : Enregistrements d'apprentissage de cours et notes</li>
-            <li><strong>Enregistrements d'achèvement de tâches</strong> : Statut d'achèvement des tâches et évaluations de satisfaction</li>
-        </ul>
+            <h3>2.4 Préférences de notification</h3>
+            <ul>
+                <li><strong>Paramètres de notification</strong> : Vos préférences pour recevoir des notifications</li>
+                <li><strong>Heures de notification</strong> : Heures programmées pour les rappels et alertes</li>
+            </ul>
 
-        <h3>3. Données d'Utilisation de l'Application (Optionnel)</h3>
-        <ul>
-            <li><strong>Journaux de plantage</strong> : Utilisés pour améliorer la stabilité et les performances de l'application (si des outils de rapport de plantage sont intégrés)</li>
-        </ul>
+            <h3>2.5 Données d'Utilisation de l'Application (Optionnel)</h3>
+            <ul>
+                <li><strong>Journaux de plantage</strong> : Utilisés pour améliorer la stabilité et les performances de l'application (si des outils de rapport de plantage sont intégrés)</li>
+            </ul>
 
-        <h2>Stockage des Données</h2>
+            <h2>3. Comment nous utilisons vos informations</h2>
+            <p>Nous utilisons les informations collectées aux fins suivantes :</p>
 
-        <h3>Stockage Local</h3>
-        <ul>
-            <li>Toutes les données utilisateur sont stockées localement sur l'appareil</li>
-            <li>Utilise les mécanismes de sécurité de l'appareil pour assurer la sécurité des données</li>
-        </ul>
+            <h3>3.1 Fonctionnalités principales de l'application</h3>
+            <ul>
+                <li class="success-item">✅ <strong>Fonctionnalités principales de l'application</strong> : Fournir des fonctionnalités de gestion de tâches, d'enregistrement, d'apprentissage, etc.</li>
+                <li class="success-item">✅ <strong>Synchronisation des données</strong> : Synchroniser les données utilisateur sur plusieurs appareils</li>
+                <li class="success-item">✅ <strong>Optimisation de l'expérience utilisateur</strong> : Améliorer les fonctionnalités et l'interface de l'application</li>
+            </ul>
 
-        <h3>Stockage Cloud</h3>
-        <ul>
-            <li>Les données utilisateur sont synchronisées vers les serveurs cloud Supabase</li>
-            <li>Le stockage cloud est utilisé pour :
+            <h3>3.2 Amélioration du service</h3>
+            <ul>
+                <li><strong>Optimisation de l'application</strong> : Amélioration des performances et de l'expérience utilisateur</li>
+                <li><strong>Correction des bugs</strong> : Identification et résolution des problèmes techniques</li>
+                <li><strong>Développement de fonctionnalités</strong> : Compréhension de l'utilisation des fonctionnalités pour guider le développement futur</li>
+            </ul>
+
+            <h3>3.3 Communication</h3>
+            <ul>
+                <li><strong>Support</strong> : Réponse à vos demandes et fourniture d'un support client</li>
+                <li><strong>Mises à jour importantes</strong> : Notification des mises à jour ou modifications importantes de l'application</li>
+            </ul>
+
+            <div class="highlight-box warning">
+                <p><strong>Nous n'utilisons PAS vos données pour :</strong></p>
                 <ul>
-                    <li>La synchronisation des données multi-appareils</li>
-                    <li>La sauvegarde et la récupération des données</li>
-                    <li>Assurer que les données ne sont pas perdues</li>
+                    <li class="error-item">❌ <strong>Publicité</strong> : Cette application ne contient pas de publicités et n'utilisera pas les données à des fins publicitaires</li>
+                    <li class="error-item">❌ <strong>Analyse de données</strong> : N'utilisera pas les données pour l'analyse de données tierces (sauf consentement explicite de l'utilisateur)</li>
+                    <li class="error-item">❌ <strong>Recommandations personnalisées</strong> : N'utilisera pas les données pour les systèmes de recommandation personnalisés</li>
+                    <li class="error-item">❌ <strong>Vente de données</strong> : Nous ne vendons pas vos informations personnelles à des tiers</li>
                 </ul>
-            </li>
-        </ul>
+            </div>
 
-        <h3>Chiffrement des Données</h3>
-        <ul>
-            <li><strong>Chiffrement de transmission</strong> : Toutes les transmissions de données utilisent le protocole de chiffrement HTTPS</li>
-            <li><strong>Chiffrement de stockage</strong> : Les données sensibles sont chiffrées lors du stockage</li>
-            <li><strong>Contrôle d'accès</strong> : Utilise des mécanismes d'authentification et d'autorisation des utilisateurs pour garantir que seul l'utilisateur peut accéder à ses propres données</li>
-        </ul>
+            <h2>4. Stockage et localisation des données</h2>
+            
+            <h3>4.1 Stockage local</h3>
+            <p>Vos données sont stockées localement sur votre appareil en utilisant :</p>
+            <ul>
+                <li><strong>Base de données SQLite</strong> : Base de données locale chiffrée pour les données de l'application</li>
+                <li><strong>Stockage sécurisé</strong> : Stockage chiffré pour les informations sensibles (utilisant FlutterSecureStorage)</li>
+            </ul>
 
-        <h2>Utilisation des Données</h2>
+            <h3>4.2 Stockage cloud</h3>
+            <p>Nous utilisons <strong>Supabase</strong> comme fournisseur de stockage cloud pour permettre la synchronisation des données entre vos appareils.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Localisation des données</strong> : Vos données sont stockées sur les serveurs Supabase situés en <strong>Amérique du Nord (États-Unis)</strong>. Cela garantit la conformité aux exigences de résidence des données pour les utilisateurs aux États-Unis et au Canada.</p>
+                <p><strong>Sécurité des données</strong> : Toutes les données transmises à Supabase et stockées dans Supabase sont chiffrées à l'aide de protocoles de chiffrement standard de l'industrie (HTTPS/TLS).</p>
+            </div>
 
-        <h3>Objectif d'Utilisation</h3>
-        <ul>
-            <li class="success-item">✅ <strong>Fonctionnalités principales de l'application</strong> : Fournir des fonctionnalités de gestion de tâches, d'enregistrement, d'apprentissage, etc.</li>
-            <li class="success-item">✅ <strong>Synchronisation des données</strong> : Synchroniser les données utilisateur sur plusieurs appareils</li>
-            <li class="success-item">✅ <strong>Optimisation de l'expérience utilisateur</strong> : Améliorer les fonctionnalités et l'interface de l'application</li>
-            <li class="error-item">❌ <strong>Publicité</strong> : Cette application ne contient pas de publicités et n'utilisera pas les données à des fins publicitaires</li>
-            <li class="error-item">❌ <strong>Analyse de données</strong> : N'utilisera pas les données pour l'analyse de données tierces (sauf consentement explicite de l'utilisateur)</li>
-            <li class="error-item">❌ <strong>Recommandations personnalisées</strong> : N'utilisera pas les données pour les systèmes de recommandation personnalisés</li>
-        </ul>
+            <h2>5. Partage de données et services tiers</h2>
+            
+            <h3>5.1 Supabase</h3>
+            <p>Nous partageons vos données avec <strong>Supabase</strong> uniquement aux fins suivantes :</p>
+            <ul>
+                <li>Stockage et sauvegarde des données</li>
+                <li>Synchronisation des données entre appareils</li>
+                <li>Authentification des utilisateurs</li>
+            </ul>
+            <p>Supabase est un fournisseur de services de confiance qui adhère à des normes strictes de sécurité des données et à des pratiques de confidentialité. Supabase n'utilise pas vos données à ses propres fins.</p>
+            <p>Pour plus d'informations sur les pratiques de confidentialité de Supabase, visitez : <a href="https://supabase.com/privacy" target="_blank" rel="noopener">https://supabase.com/privacy</a></p>
 
-        <h3>Partage des Données</h3>
-        <ul>
-            <li><strong>Partage avec Supabase</strong> : Les données utilisateur sont stockées sur les serveurs cloud Supabase
-                <ul>
-                    <li>Supabase suit des normes strictes de sécurité des données</li>
-                    <li>Supabase n'utilisera pas les données utilisateur à d'autres fins</li>
-                    <li>Pour plus d'informations, visitez : <a href="https://supabase.com/privacy" target="_blank" rel="noopener">https://supabase.com/privacy</a></li>
-                </ul>
-            </li>
-            <li><strong>Pas de partage avec des tiers</strong> : À l'exception de Supabase, nous ne partageons pas les données utilisateur avec des tiers</li>
-        </ul>
+            <h3>5.2 Services de Notification Locale</h3>
+            <ul>
+                <li><strong>Objectif</strong> : Envoi de rappels de tâches et de notifications</li>
+                <li><strong>Partage de données</strong> : Ne partage aucune donnée, fonctionne uniquement sur l'appareil local</li>
+            </ul>
 
-        <h2>Droits des Utilisateurs</h2>
-        <p>Vous avez les droits suivants concernant vos données :</p>
+            <h3>5.3 Aucun autre partage avec des tiers</h3>
+            <p>Nous ne :</p>
+            <ul>
+                <li>Vendons pas vos informations personnelles à des tiers</li>
+                <li>Partageons pas vos données avec des annonceurs</li>
+                <li>Permettons pas aux tiers d'accéder à vos données à leurs propres fins</li>
+            </ul>
 
-        <h3>1. Droit d'Accès</h3>
-        <ul>
-            <li>Vous pouvez consulter toutes vos données dans l'application à tout moment</li>
-        </ul>
+            <h2>6. Sécurité des données</h2>
+            <p>Nous prenons les mesures suivantes pour protéger la sécurité de vos données :</p>
+            <ol>
+                <li><strong>Transmission chiffrée</strong> : Toutes les transmissions de données utilisent le protocole de chiffrement HTTPS</li>
+                <li><strong>Stockage chiffré</strong> : Les données sensibles sont chiffrées lors du stockage</li>
+                <li><strong>Contrôle d'accès</strong> : Utilise des mécanismes d'authentification et d'autorisation des utilisateurs</li>
+                <li><strong>Isolation des données</strong> : Les données de chaque utilisateur sont isolées par ID utilisateur</li>
+                <li><strong>Sauvegardes régulières</strong> : Les données cloud sont régulièrement sauvegardées pour éviter la perte de données</li>
+                <li><strong>Audits de sécurité</strong> : Audits de sécurité réguliers et scans de vulnérabilités</li>
+            </ol>
 
-        <h3>2. Droit de Suppression</h3>
-        <ul>
-            <li>Vous pouvez supprimer toutes les données dans l'application</li>
-            <li>Vous pouvez effacer toutes les données dans les paramètres</li>
-            <li>Lorsque vous supprimez votre compte, toutes les données associées seront définitivement supprimées</li>
-        </ul>
+            <h2>7. Vos droits et choix</h2>
+            
+            <h3>7.1 Accéder à vos données</h3>
+            <p>Vous pouvez accéder à toutes vos données directement via l'Application. Vous pouvez consulter :</p>
+            <ul>
+                <li>Vos tâches et historique des tâches</li>
+                <li>Vos révisions quotidiennes et notes</li>
+                <li>Votre progression d'apprentissage</li>
+                <li>Toutes les autres données stockées dans votre compte</li>
+            </ul>
 
-        <h3>3. Droit d'Exportation</h3>
-        <ul>
-            <li>Vous pouvez exporter toutes les données dans les paramètres (format JSON)</li>
-        </ul>
+            <h3>7.2 Supprimer vos données</h3>
+            <p>Vous avez le droit de supprimer vos données à tout moment :</p>
+            <p><strong>Via l'Application</strong> :</p>
+            <ul>
+                <li>Utilisez la fonctionnalité « Gestion des données » dans les Paramètres pour supprimer des données spécifiques ou votre compte entier</li>
+            </ul>
+            <p><strong>En nous contactant</strong> :</p>
+            <ul>
+                <li>Envoyez-nous un e-mail à <strong>thefoxwithinapp@gmail.com</strong> pour demander la suppression des données</li>
+                <li>Nous traiterons votre demande dans les 30 jours</li>
+            </ul>
 
-        <h3>4. Droit de Modification</h3>
-        <ul>
-            <li>Vous pouvez modifier vos informations de compte et vos données à tout moment</li>
-        </ul>
+            <h3>7.3 Exporter vos données</h3>
+            <p>Vous pouvez exporter vos données à tout moment :</p>
+            <ul>
+                <li>Utilisez la fonctionnalité « Exporter les données » dans les Paramètres pour télécharger une copie de toutes vos données au format JSON</li>
+            </ul>
 
-        <h3>5. Droit de Retirer le Consentement</h3>
-        <ul>
-            <li>Vous pouvez retirer votre consentement à la collecte de données à tout moment</li>
-            <li>Après avoir retiré le consentement, certaines fonctionnalités peuvent devenir indisponibles</li>
-        </ul>
+            <h3>7.4 Droit de Modification</h3>
+            <p>Vous pouvez modifier vos informations de compte et vos données à tout moment :</p>
+            <ul>
+                <li>Mettre à jour vos informations de profil dans les Paramètres</li>
+                <li>Modifier ou supprimer vos tâches, notes et enregistrements</li>
+            </ul>
 
-        <h2>Mesures de Sécurité des Données</h2>
-        <p>Nous prenons les mesures suivantes pour protéger la sécurité de vos données :</p>
-        <ol>
-            <li><strong>Transmission chiffrée</strong> : Toutes les transmissions de données utilisent le protocole de chiffrement HTTPS</li>
-            <li><strong>Stockage chiffré</strong> : Les données sensibles sont chiffrées lors du stockage</li>
-            <li><strong>Contrôle d'accès</strong> : Utilise des mécanismes d'authentification et d'autorisation des utilisateurs</li>
-            <li><strong>Isolation des données</strong> : Les données de chaque utilisateur sont isolées par ID utilisateur</li>
-            <li><strong>Sauvegardes régulières</strong> : Les données cloud sont régulièrement sauvegardées pour éviter la perte de données</li>
-            <li><strong>Audits de sécurité</strong> : Audits de sécurité réguliers et scans de vulnérabilités</li>
-        </ol>
+            <h3>7.5 Retirer votre consentement</h3>
+            <p>Vous pouvez retirer votre consentement au traitement des données à tout moment en :</p>
+            <ul>
+                <li>Supprimant votre compte via l'Application</li>
+                <li>Nous contactant à <strong>thefoxwithinapp@gmail.com</strong></li>
+            </ul>
+            <p>Après avoir retiré le consentement, certaines fonctionnalités peuvent devenir indisponibles.</p>
 
-        <h2>Services Tiers</h2>
-        <p>Cette application utilise les services tiers suivants :</p>
+            <h3>7.6 Désactiver les notifications</h3>
+            <p>Vous pouvez gérer les préférences de notification dans les Paramètres :</p>
+            <ul>
+                <li>Activer ou désactiver des types de notification spécifiques</li>
+                <li>Ajuster les heures de notification</li>
+                <li>Désactiver toutes les notifications si vous le souhaitez</li>
+            </ul>
 
-        <h3>Supabase</h3>
-        <ul>
-            <li><strong>Objectif</strong> : Authentification des utilisateurs et stockage des données</li>
-            <li><strong>Partage de données</strong> : Informations de compte utilisateur et données de l'application</li>
-            <li><strong>Politique de confidentialité</strong> : <a href="https://supabase.com/privacy" target="_blank" rel="noopener">https://supabase.com/privacy</a></li>
-            <li><strong>Mesures de sécurité</strong> : Supabase suit des mesures de sécurité conformes aux normes de l'industrie</li>
-        </ul>
+            <h2>8. Conservation des données</h2>
+            <ul>
+                <li><strong>Comptes actifs</strong> : Les données seront conservées tant que votre compte est actif</li>
+                <li><strong>Suppression de compte</strong> : Après la suppression du compte, toutes les données seront définitivement supprimées dans les 30 jours</li>
+                <li><strong>Données locales</strong> : Vous pouvez supprimer les données locales via les fonctionnalités de gestion des données de l'Application</li>
+                <li><strong>Exigences légales</strong> : Dans les cas requis par la loi, certaines données peuvent devoir être conservées</li>
+            </ul>
 
-        <h3>Services de Notification Locale</h3>
-        <ul>
-            <li><strong>Objectif</strong> : Envoi de rappels de tâches et de notifications</li>
-            <li><strong>Partage de données</strong> : Ne partage aucune donnée, fonctionne uniquement sur l'appareil local</li>
-        </ul>
+            <h2>9. Confidentialité des enfants</h2>
+            <p>Notre Application n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si vous êtes un parent ou un tuteur et croyez que votre enfant nous a fourni des informations personnelles, veuillez nous contacter immédiatement à <strong>thefoxwithinapp@gmail.com</strong>, et nous supprimerons ces informations dès que possible.</p>
 
-        <h2>Conservation des Données</h2>
-        <ul>
-            <li><strong>Comptes actifs</strong> : Les données seront conservées tant que votre compte est actif</li>
-            <li><strong>Suppression de compte</strong> : Après la suppression du compte, toutes les données seront définitivement supprimées dans les 30 jours</li>
-            <li><strong>Exigences légales</strong> : Dans les cas requis par la loi, certaines données peuvent devoir être conservées</li>
-        </ul>
+            <h2>10. Transferts Internationaux de Données</h2>
+            <p>Vos données peuvent être transférées vers et stockées sur des serveurs situés en dehors de votre pays/région. Nous nous assurons que tous les transferts de données sont conformes aux lois applicables sur la protection des données. Vos données sont stockées sur les serveurs Supabase situés en <strong>Amérique du Nord (États-Unis)</strong>, ce qui garantit la conformité aux exigences de résidence des données pour les utilisateurs aux États-Unis et au Canada.</p>
 
-        <h2>Confidentialité des Enfants</h2>
-        <p>Cette application n'est pas spécifiquement destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si vous découvrez que nous avons involontairement collecté des informations auprès d'un enfant, veuillez nous contacter immédiatement, et nous les supprimerons dès que possible.</p>
+            <h2>11. Base Légale (RGPD)</h2>
+            <p>Si vous êtes situé dans l'Union européenne, la base légale de notre traitement de vos données personnelles comprend :</p>
+            <ul>
+                <li><strong>Exécution du contrat</strong> : Pour fournir les services de l'application</li>
+                <li><strong>Intérêts légitimes</strong> : Pour améliorer les fonctionnalités de l'application et l'expérience utilisateur</li>
+                <li><strong>Consentement</strong> : Dans certains cas, nous solliciterons votre consentement explicite</li>
+            </ul>
 
-        <h2>Transferts Internationaux de Données</h2>
-        <p>Vos données peuvent être transférées vers et stockées sur des serveurs situés en dehors de votre pays/région. Nous nous assurons que tous les transferts de données sont conformes aux lois applicables sur la protection des données.</p>
+            <h2>12. Droits des consommateurs californiens (CCPA)</h2>
+            <p>Si vous êtes résident de la Californie, vous avez les droits supplémentaires suivants :</p>
 
-        <h2>Mises à Jour de la Politique</h2>
-        <p>Cette politique de confidentialité peut être mise à jour périodiquement. Lors des mises à jour, nous :</p>
-        <ul>
-            <li>Vous informerons dans l'application</li>
-            <li>Mettre à jour la date de "Dernière mise à jour" sur cette page</li>
-            <li>Pour les changements importants, nous vous informerons par des notifications dans l'application ou par courriel</li>
-        </ul>
-        <div class="highlight-box">
-            <strong>Nous vous recommandons de consulter régulièrement cette politique de confidentialité pour rester informé.</strong>
+            <h3>12.1 Vos Droits de Confidentialité Californiens</h3>
+            <ul>
+                <li><strong>Droit de savoir</strong> : Vous avez le droit de demander des informations sur les informations personnelles que nous collectons, utilisons, divulguons et vendons</li>
+                <li><strong>Droit de suppression</strong> : Vous avez le droit de demander la suppression de vos informations personnelles</li>
+                <li><strong>Droit de refus</strong> : Nous ne vendons pas vos informations personnelles, donc il n'est pas nécessaire de refuser</li>
+                <li><strong>Droit de non-discrimination</strong> : Nous ne vous discriminerons pas pour avoir exercé vos droits de confidentialité</li>
+            </ul>
+
+            <h3>12.2 Comment Exercer Vos Droits</h3>
+            <div class="highlight-box">
+                <p><strong>Pour exercer vos droits CCPA</strong>, veuillez nous contacter à <strong>thefoxwithinapp@gmail.com</strong> avec la ligne d'objet « Demande CCPA ».</p>
+                <p>Nous répondrons à votre demande dans les 45 jours.</p>
+            </div>
+
+            <h2>13. Droits de confidentialité canadiens (PIPEDA)</h2>
+            <p>Si vous êtes résident canadien, vous avez les droits suivants en vertu de la Loi sur la protection des renseignements personnels et les documents électroniques (PIPEDA) :</p>
+
+            <h3>13.1 Vos Droits de Confidentialité Canadiens</h3>
+            <ul>
+                <li><strong>Droit d'accès</strong> : Vous avez le droit d'accéder à vos renseignements personnels</li>
+                <li><strong>Droit de correction</strong> : Vous avez le droit de demander la correction d'informations inexactes</li>
+                <li><strong>Droit de retirer le consentement</strong> : Vous pouvez retirer votre consentement à la collecte de données à tout moment</li>
+                <li><strong>Droit de déposer une plainte</strong> : Vous pouvez déposer une plainte auprès du Commissaire à la protection de la vie privée du Canada si vous croyez que vos droits de confidentialité ont été violés</li>
+            </ul>
+
+            <h3>13.2 Stockage des Données au Canada</h3>
+            <p>Nous utilisons Supabase pour le stockage cloud, qui stocke des données sur des serveurs situés en <strong>Amérique du Nord (États-Unis)</strong>. Nous nous assurons que tous les transferts de données sont conformes aux exigences de la LPRPDE et aux lois applicables sur la protection des données.</p>
+
+            <h3>13.3 Conformité avec la Loi sur la Protection des Consommateurs du Québec</h3>
+            <p>Si vous êtes résident du Québec, vous avez également des droits supplémentaires en vertu de la Loi sur la protection des consommateurs du Québec. Nous nous engageons à respecter toutes les lois applicables du Québec concernant la protection des renseignements personnels.</p>
+
+            <div class="highlight-box">
+                <p><strong>Pour exercer vos droits PIPEDA</strong>, veuillez nous contacter à <strong>thefoxwithinapp@gmail.com</strong> avec la ligne d'objet « Demande PIPEDA ».</p>
+            </div>
+
+            <h2>14. Modifications de cette Politique de Confidentialité</h2>
+            <p>Cette politique de confidentialité peut être mise à jour périodiquement. Lors des mises à jour, nous :</p>
+            <ul>
+                <li>Vous informerons dans l'application</li>
+                <li>Mettre à jour la date de "Dernière mise à jour" sur cette page</li>
+                <li>Pour les changements importants, nous vous informerons par des notifications dans l'application ou par courriel</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Nous vous recommandons de consulter régulièrement cette politique de confidentialité pour rester informé.</strong></p>
+            </div>
+
+            <div class="contact-info">
+                <h3>15. Nous contacter</h3>
+                <p>Si vous avez des questions, commentaires ou plaintes concernant cette politique de confidentialité, veuillez nous contacter par :</p>
+                <p><strong>Courriel</strong> : <a href="mailto:thefoxwithinapp@gmail.com">thefoxwithinapp@gmail.com</a></p>
+                <p><strong>Commentaires dans l'application</strong> : Soumettre des commentaires dans la page des paramètres de l'application</p>
+                <p style="margin-top: 20px;">Nous répondrons dès que possible après avoir reçu votre contact (généralement dans les 7 jours ouvrables).</p>
+            </div>
         </div>
-
-        <h2>Nous Contacter</h2>
-        <p>Si vous avez des questions, commentaires ou plaintes concernant cette politique de confidentialité, veuillez nous contacter par :</p>
-        <ul>
-            <li><strong>Courriel</strong> : <a href="mailto:thefoxwithinapp@gmail.com">thefoxwithinapp@gmail.com</a></li>
-            <li><strong>Commentaires dans l'application</strong> : Soumettre des commentaires dans la page des paramètres de l'application</li>
-        </ul>
-        <p>Nous répondrons dès que possible après avoir reçu votre contact (généralement dans les 7 jours ouvrables).</p>
-
-        <h2>Base Légale (RGPD)</h2>
-        <p>Si vous êtes situé dans l'Union européenne, la base légale de notre traitement de vos données personnelles comprend :</p>
-        <ul>
-            <li><strong>Exécution du contrat</strong> : Pour fournir les services de l'application</li>
-            <li><strong>Intérêts légitimes</strong> : Pour améliorer les fonctionnalités de l'application et l'expérience utilisateur</li>
-            <li><strong>Consentement</strong> : Dans certains cas, nous solliciterons votre consentement explicite</li>
-        </ul>
-
-        <h2>Droits de Confidentialité Canadiens (LPRPDE)</h2>
-        <p>Si vous êtes situé au Canada, vous avez des droits en vertu de la Loi sur la protection des renseignements personnels et les documents électroniques (LPRPDE) :</p>
-
-        <h3>Vos Droits de Confidentialité Canadiens</h3>
-        <ul>
-            <li><strong>Droit d'accès</strong> : Vous avez le droit d'accéder à vos renseignements personnels</li>
-            <li><strong>Droit de correction</strong> : Vous avez le droit de demander la correction d'informations inexactes</li>
-            <li><strong>Droit de retirer le consentement</strong> : Vous pouvez retirer votre consentement à la collecte de données à tout moment</li>
-            <li><strong>Droit de déposer une plainte</strong> : Vous pouvez déposer une plainte auprès du Commissaire à la protection de la vie privée du Canada si vous croyez que vos droits de confidentialité ont été violés</li>
-        </ul>
-
-        <h3>Stockage des Données au Canada</h3>
-        <p>Nous utilisons Supabase pour le stockage cloud, qui peut stocker des données sur des serveurs situés à l'extérieur du Canada. Nous nous assurons que tous les transferts de données sont conformes aux exigences de la LPRPDE et aux lois applicables sur la protection des données.</p>
-
-        <h3>Conformité avec la Loi sur la Protection des Consommateurs du Québec</h3>
-        <p>Si vous êtes résident du Québec, vous avez également des droits supplémentaires en vertu de la Loi sur la protection des consommateurs du Québec. Nous nous engageons à respecter toutes les lois applicables du Québec concernant la protection des renseignements personnels.</p>
 
         <div class="footer">
-            <p><strong>Dernière mise à jour</strong> : Novembre 2025</p>
-            <p><strong>Date d'entrée en vigueur</strong> : Novembre 2025</p>
-            <p style="margin-top: 20px;"><strong>Note</strong> : Veuillez lire attentivement cette politique de confidentialité avant d'utiliser cette application. En utilisant cette application, vous acceptez les termes de cette politique de confidentialité.</p>
+            <p>© 2025 The Fox Within. Tous droits réservés.</p>
+            <p style="margin-top: 10px; opacity: 0.8;"><strong>Date d'entrée en vigueur :</strong> Janvier 2025 | <strong>Dernière mise à jour :</strong> Janvier 2025</p>
+            <p style="margin-top: 10px; opacity: 0.8;"><strong>Note</strong> : Veuillez lire attentivement cette politique de confidentialité avant d'utiliser cette application. En utilisant cette application, vous acceptez les termes de cette politique de confidentialité.</p>
         </div>
     </div>
 </body>
 </html>
-
